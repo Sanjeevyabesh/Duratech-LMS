@@ -1,0 +1,500 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  color: #222;
+}
+
+body {
+  background: #f0f2f5;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background: #0a1f44;
+  color: white;
+  padding: 15px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  font-weight: 900;
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  color: #e0e7ff;
+  text-shadow: 0 0 6px #4e6ef2;
+  user-select: none;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.navbar-links li a,
+.logout-btn {
+  color: #cbd5e1;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 10px 18px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.navbar-links li a:hover,
+.logout-btn:hover {
+  background: #3b57d3;
+  color: white;
+  box-shadow: 0 0 10px #3b57d3;
+}
+
+/* Page Container */
+.page-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.page-container h2 {
+  margin-bottom: 25px;
+  font-weight: 800;
+  color: #0a1f44;
+  font-size: 1.75rem;
+  letter-spacing: 0.05em;
+}
+
+/* Form Container */
+.form-container {
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+form label {
+  display: block;
+  font-weight: 600;
+  margin: 12px 0 6px;
+  color: #0a1f44;
+}
+
+form input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1.8px solid #bbb;
+  transition: 0.3s ease;
+}
+
+form input:focus {
+  border-color: #4e6ef2;
+  box-shadow: 0 0 10px #4e6ef2;
+  outline: none;
+}
+
+form button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 14px 0;
+  background-color: #4e6ef2;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(78, 110, 242, 0.45);
+  transition: 0.3s ease;
+}
+
+form button:hover {
+  background-color: #3b57d3;
+  box-shadow: 0 12px 28px rgba(59, 87, 211, 0.55);
+}
+
+.error-msg {
+  color: #d92f2f;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+.switch-auth {
+  margin-top: 22px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.auth-link {
+  color: #4e6ef2;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+/* List Styling */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background: #eef2ff;
+  margin-bottom: 15px;
+  padding: 15px 18px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 4px #4e6ef2;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+ul li:hover {
+  background: #d0dbff;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #0a1f44;
+  font-weight: 600;
+  display: block;
+}
+
+/* Assessment Page */
+.page-container.assessment {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 30px 40px;
+  background: #f9fbff;
+  border-radius: 15px;
+  box-shadow: 0 20px 35px rgba(30, 60, 120, 0.1);
+}
+
+.page-container.assessment h2 {
+  font-weight: 800;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #0a1f44;
+  text-align: center;
+}
+
+.page-container.assessment ul li {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px solid #4e6ef2;
+  box-shadow: 0 8px 18px rgba(78, 110, 242, 0.18);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #1a2a55;
+  transition: 0.25s ease;
+}
+
+.page-container.assessment ul li:hover {
+  background-color: #4e6ef2;
+  color: white;
+  box-shadow: 0 14px 28px rgba(78, 110, 242, 0.55);
+}
+
+/* Button General Style */
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+/* Assessment Button */
+.assessment-btn {
+  display: block;
+  width: 180px;
+  margin: 30px auto;
+  padding: 14px 0;
+  background-color: #4e6ef2;
+  color: white;
+  font-weight: 700;
+  font-size: 1.05rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(78, 110, 242, 0.25);
+}
+
+.assessment-btn:hover {
+  background: #3b57d3;
+  box-shadow: 0 14px 28px rgba(59, 87, 211, 0.45);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 15px 20px;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .page-container,
+  .form-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .navbar-logo {
+    font-size: 1.5rem;
+  }
+}
+/* Global styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* Course Card */
+.course-card {
+  background-color: white;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+}
+
+.course-card h2 {
+  font-size: 1.8rem;
+  color: #0a214d;
+  margin-bottom: 10px;
+}
+
+.course-card p {
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.course-card button {
+  background-color: white;
+  color: #0a214d;
+  border: 2px solid #0a214d;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.course-card button:hover {
+  background-color: #0a214d;
+  color: white;
+}
+
+/* Assessment Page */
+.page-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.page-container h2 {
+  font-size: 2rem;
+  color: #0a214d;
+  margin-bottom: 10px;
+}
+
+.page-container a {
+  text-decoration: none;
+  color: #0a214d;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.page-container a:hover {
+  text-decoration: underline;
+}
+
+.page-container h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.page-container ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.page-container li {
+  background-color: #e7ecff;
+  margin-bottom: 12px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.page-container li:hover {
+  background-color: #cdd7ff;
+}
+
+/* Score Section */
+.page-container .score {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.progress-bar {
+  width: 100%;
+  height: 14px;
+  background-color: #ddd;
+  border-radius: 7px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.filled-bar {
+  height: 100%;
+  background-color: #4caf50;
+}
+.app-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode .question-card,
+.dark-mode .result-summary {
+  background: #1f1f1f;
+  color: #ffffff;
+  box-shadow: 0 0 10px #2e2e2e;
+}
+
+h1 {
+  text-align: center;
+  color: #0b1d57;
+}
+
+.question-card {
+  margin-top: 20px;
+  background-color: #f0f4ff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.question-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.question-card li {
+  padding: 12px;
+  background: #fff;
+  border: 2px solid #c8d6ff;
+  margin-top: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.question-card li:hover {
+  background: #c8d6ff;
+  transform: scale(1.02);
+}
+
+.result-summary {
+  margin-top: 20px;
+  background-color: #e7f0ff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #bbb;
+}
+
+.result-summary ul {
+  list-style: none;
+  padding: 0;
+}
+
+.result-summary li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.progress-bar {
+  width: 100%;
+  background: #ccc;
+  border-radius: 10px;
+  height: 20px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.filled-bar {
+  height: 100%;
+  background: #007bff;
+  transition: width 0.5s ease-in-out;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  background-color: #0b1d57;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #143397;
+}
+
+.dark-mode button {
+  background-color: #ffffff;
+  color: #121212;
+}
+
+.dark-mode button:hover {
+  background-color: #dddddd;
+}
